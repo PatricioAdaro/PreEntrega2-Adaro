@@ -1,0 +1,93 @@
+* {
+    Margin:0;
+    padding:0;
+    box-sizing: border-box; 
+}
+body{
+    height:100vw;
+}
+.navegacion{ 
+    background-color: #2ae7ce;
+    position: relative;
+}
+
+
+.vineta{
+    list-style-type: none; 
+    text-align: center;
+    display: inline;
+    position: absolute;
+    top: 28px;
+    left: 430px;
+
+}
+
+.logo{
+    display:inline-block;
+    background-color: #c4b1d0;
+    margin: 10px;
+    padding: 3px;
+    text-align: center;
+    border-radius: 10px;
+    animation-name: logohotel;
+    animation-duration: 2s;
+}
+@keyframes logohotel {
+    from{
+        transform: translate(0px) rotate(0) ;
+    }
+    to{
+        transform: translate(25px) rotate(360deg) ;
+    }
+    
+}
+H1{
+    color: #43175d;
+    display: inline;
+}
+.lista{
+    display:inline-block;
+    
+    text-align: center;
+}
+.item{
+   color: blue;
+   text-decoration: none;
+   background-color: beige;
+   padding: 5px;
+   margin-inline: 10px;
+   margin-bottom: 25px;
+   border-radius: 5px;
+}
+
+main{
+    height:500px;
+    position: relative;
+}
+.foto{
+    height: 500px;
+}
+.texto{
+    margin: 20px;
+    height: 450px;
+    width: 550px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+h2{
+    display: block;
+    padding: 10px;
+}
+.parrafo1{ 
+    color: blueviolet;
+    font-style: italic;
+    text-align:left;
+    font-size: 20px;
+    padding: 10px;
+}    
+#pieDePagina{
+    background-color: #2ae7ce;
+    height: 50px;
+}
+
