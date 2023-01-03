@@ -25,7 +25,10 @@ header{
     align-items: center;
 }
 .vineta{
-    margin-right:350px;
+    display: flex;
+    flex-direction: row;
+   
+    
 }
 .logo{
     display:inline-block;
@@ -67,7 +70,7 @@ H1{
 main{
     width: 100vw;
     grid-area: main;
-    height:75vh;
+    height:73vh;
     display: flex;
     flex-direction:row;
     flex-wrap: wrap;
@@ -100,7 +103,7 @@ main{
 }    
 footer{
     background-color: #9ccc65;
-    height: 10vh;
+    height: 12vh;
     grid-area: footer;
     display: flex;
     flex-direction: row;
@@ -119,7 +122,7 @@ footer div{
     padding-left: 5px;
 }
 
-/* pagina de servicios */
+/* PAGINA DE SERVICIOS */
 
 
 .itemServ{
@@ -192,10 +195,10 @@ footer div{
 
 
 
-/* pagins de habitaciones */
+/* PAGINA DE HABITACIONES */
 
 
-.logoHab{
+.logo{
     display:inline-block;
     background-color: #CCFF00 ;
     padding: 15px;
@@ -214,7 +217,7 @@ footer div{
         opacity: 1;
     }
 }
-.itemHab{
+.item{
     color: rgb(0, 0, 0);
     text-decoration: none;
     background-color:#9ccc65;
@@ -224,21 +227,22 @@ footer div{
     border-radius: 5px;
     transition: 1s;
  }
- .itemHab:hover {
+ .item:hover {
     background-color: #dbefc3;
 }
-.listaHab{
+.lista{
     display: inline-block;  
 }
-.logoHab{
+.logo{
     grid-area: logo;
 }
-.navHab{
+.nav{
     grid-area: nav;
 }
-.vinetaHab{
-    padding-right: 350px;
-}
+/* .vineta{
+    display: flex;
+    flex-direction: row;
+} */
 #mainHab{
     display: grid;
     grid-template-rows: 1fr;
@@ -252,37 +256,57 @@ footer div{
     grid-area: habitacion1;
     /* background-color: aqua; */
     padding: 15px;
-    margin-top: 25px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-   
-
 }
 #habDos{
     grid-area: habitacion2; 
     /* background-color: rgb(109, 241, 43); */
     padding: 15px;
-    margin-top: 25px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    
 }
 #habTres{
     grid-area: habitacion3;
     /* background-color: rgb(67, 58, 201); */
     padding: 15px;
-    margin-top: 25px;
+    margin-top: 10px;
     display: flex;
     flex-direction: column;
     align-items:flex-start;
 }
 #mainHab div img{
     height: 200px;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
+/* PAGINA DE NOSOTROS */
+
+#mainNos{
+    display: grid;
+    grid-template-rows:1fr ;
+    grid-template-columns:1fr 1fr ;
+    grid-template-areas: 
+    "conocenos video";
+    justify-items: center;
+    align-items:center;
+    
+}
+.conocenos{
+    grid-area: conocenos;
+    
+    padding: 10px;
+}
+.video{
+    grid-area: video;
+    
+    padding: 10px;
+    
+}
 
 
 
@@ -317,7 +341,7 @@ footer div{
         display: inline;
         font-size: 0.5rem;
     }
-    .logoHab{
+    .logo{
         display:inline-block;
         background-color: #CCFF00 ;
         padding: 2px;
@@ -336,7 +360,7 @@ footer div{
             opacity: 1;
         }
     }
-    .itemHab{
+    .item{ 
         color: rgb(0, 0, 0);
         text-decoration: none;
         background-color:#9ccc65;
@@ -346,12 +370,33 @@ footer div{
         border-radius: 5px;
         transition: 1s;
      }
-     .itemHab:hover {
+     .item:hover {
         background-color: #dbefc3;
     }
-    .vinetaHab{
-        padding: 1px;}
+    .lista{
+        display: inline-block; 
+     }
     
+    footer{
+        background-color: #9ccc65;
+        height: 12vh;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+    footer div{
+        flex-basis: 1;
+        flex-grow: 100%;
+    }
+    .telFooter,.textFooter,.mailFooter{
+        height: 15px;}
+    .numTel,.mail{
+        padding-left: 5px;
+    }
+    
+    /* MAIN DE LA PAGINA HABITACIONES */
     
     #mainHab{
         display: grid;
@@ -367,55 +412,46 @@ footer div{
     #habUno{
         grid-area: habitacion1;
         /* background-color: aqua; */
-        padding: 15px;
+        padding: 10px;
         display: flex;
         flex-direction: row;
-       
-    
     }
     #habDos{
         grid-area: habitacion2; 
         /* background-color: rgb(109, 241, 43); */
-        padding: 15px;
+        padding: 10px;
         display: flex;
         flex-direction: row;
-        
     }
     #habTres{
         grid-area: habitacion3;
         /* background-color: rgb(67, 58, 201); */
-        padding: 15px;
+        padding: 10px;
         display: flex;
         flex-direction: row;
     }
     #mainHab div img{
         height: 80px;
+        
     }
 
-    
+    /* MAIN DE LA PAGINA NOSOTROS */
 
-    footer{
-        background-color: #9ccc65;
-        height: 15vh;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+    #mainNos{
+        display: grid;
+        grid-template-rows:1fr 1fr;
+        grid-template-columns:1fr  ;
+        grid-template-areas: 
+        "conocenos "
+        "video";
+        justify-items: center;
         align-items: center;
-        
     }
-    footer div{
-        flex-basis: 1;
-        flex-grow: 100%;
+    iframe{
+        height: 200px;
+      
     }
-    .telFooter,.textFooter,.mailFooter{
-        height: 15px;}
-    .numTel,.mail{
-        padding-left: 5px;
-        }
-        
 
-  
-    
 }
 
 
