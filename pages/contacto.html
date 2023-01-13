@@ -4,50 +4,68 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
+    <link rel="stylesheet" href="../css/style.css">
     <title>contacto</title>
 </head>
 <body>
    
     <header>
-        <nav>
-            <ul>
-                <li><a href="../index.html">inicio</a></li>
-                <li><a href="servicios.html">servicios</a></li>
-                <li><a href="habitaciones.html">habitaciones</a></li>
-                <li><a href="nosotros.html">nosotros</a></li>
-                <li><a href="contacto.html">contacto</a></li>
+        <div class="logo">
+                <h1>HOTEL<BR>
+                 PARADICE</h1>
+        </div>
+        <nav class="nav">
+            
+            <ul class="vineta">
+                <li class="lista"><a href="../index.html"class="item">inicio</a></li>
+                <li class="lista"><a href="../pages/servicios.html"class="item">servicios</a></li>
+                <li class="lista"><a href="../pages/habitaciones.html"class="item">habitaciones</a></li>
+                <li class="lista"><a href="../pages/nosotros.html"class="item">nosotros</a></li>
+                <li class="lista"><a href="../pages/contacto.html"class="item">contacto</a></li>
             </ul>
         </nav>
-    </header> 
-    <h3>contactate con nosotros</h3>
-    <form action="#">
+    </header>
+        
+   
+    <main id="mainContact">
+        <div class="container">
+        <h3>Contactate con nosotros</h3>
+        
+        <form>
+            
                 
-        <fieldset>
-            <legend>Datos personales</legend>
-                
-            <label for="text"> Nombre:
-            <input type="text" placeholder="escribe tu nombre">
-            </label><br>
-            <label for="texto">Apellido:
-            <input type="text" placeholder="escribe tu apellido">
-            </label><br>
-            <label for="email">Email:
-            <input type="email" placeholder="hahaha@lala.com">
-            </label><br>
-            <label for="number">Cantidad de personas:<br>
-            <input type="number" placeholder="cantidad"></label><br>
-            </label>
-			<label for="Observaciones"> Observaciones:<br>
-			<textarea cols=25 rows=8 placeholder="Observaciones"></textarea><br>
-            <input type="submit" value="Enviar">
-			<input type="reset" value="Cancelar">
-                        
-        </fieldset>
-    </form>
+                <label for="text"> Nombre
+                <input  type="text" class="imputCont"placeholder="escribe tu nombre">
+                </label>
+                <label for="text" > Apellido
+                <input type="text" class="imputCont"placeholder="escribe tu apellido">
+                </label>
+                <label for="email"> Email
+                <input type="email"class="imputCont" placeholder="hahaha@lala.com">
+                </label>
+                <label for="number"> Personas
+                <input type="number"class="imputCont" placeholder="cantidad"></label>
+                </label>
+			    <label for="Comentario"> Comentario <br>
+			    <textarea cols=25 rows=8 placeholder="Comentario"></textarea><br>
+                <input type="submit"class="boton" value="Enviar">
+			    <input type="reset"class="boton" value="Cancelar">
+            
+        </form>
+        </div>
+    </main>
+
+    <footer>
+        <div >
+            <img  class="telFooter"src="../asset/img/icono-tel.png" alt="tel"> 
+            <p class="numTel">2614-4453987</p>  
+        </div>
+        <div>
+            <p class="textFooter">copyright2022©</p>
+        </div>
+        <div >
+            <img class="mailFooter" src="../asset/img/mail.png" alt="mail"> 
+            <p class="mail"> hotelparadice@gmail.com</p>
+    </footer>        
 </body>
-<footer>
-    <p>telefono:543210123</p>
-    <p>copyright2022©</p>
-</footer>
 </html>

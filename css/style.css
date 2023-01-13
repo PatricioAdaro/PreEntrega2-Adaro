@@ -4,8 +4,10 @@
     box-sizing: border-box; 
 }
 body{
+
     height:100vh;
     width: 100vw;
+    overflow-x: hidden;
     display: grid;
     grid-template-rows:1fr 1fr 1fr ;
     grid-template-columns:1fr 1fr;
@@ -13,6 +15,8 @@ body{
     "header header"
     "main main"
     "footer footer";
+
+    
 }
 header{
     height: 15vh;
@@ -27,8 +31,6 @@ header{
 .vineta{
     display: flex;
     flex-direction: row;
-   
-    
 }
 .logo{
     display:inline-block;
@@ -81,12 +83,18 @@ main{
    display: flex;
    justify-content: center;
    align-items: center;
+   
+   grid-area: sectionuno;
+   
 }
-.sectionDos{
+.sectionDos{ 
     width: 50vw;
     display: flex;
     justify-content: center;
     align-items: center;
+  
+    grid-area: sectiondos;
+   
  }
 .foto{
     height: 70vh;
@@ -129,7 +137,7 @@ footer div{
    color: rgb(0, 0, 0);
    text-decoration: none;
    background-color:#9ccc65;
-   padding: 5px;
+   padding: 2px;
    margin-inline: 10px;
    margin-bottom: 25px;
    border-radius: 5px;
@@ -144,7 +152,7 @@ footer div{
     grid-template-rows: 1fr;
     grid-template-columns:1fr 1fr 1fr ;
     grid-template-areas:
-    "resto escursion spa";
+    "resto excursion spa";
 }
 .resto{
     grid-area: resto;
@@ -154,8 +162,8 @@ footer div{
     justify-content: center;
     align-content: flex-end;
 }
-.escursion{
-    grid-area: escursion;
+.excursion{
+    grid-area: excursion;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -221,7 +229,7 @@ footer div{
     color: rgb(0, 0, 0);
     text-decoration: none;
     background-color:#9ccc65;
-    padding: 5px;
+    padding: 2px;
     margin-inline: 10px;
     margin-bottom: 25px;
     border-radius: 5px;
@@ -239,10 +247,6 @@ footer div{
 .nav{
     grid-area: nav;
 }
-/* .vineta{
-    display: flex;
-    flex-direction: row;
-} */
 #mainHab{
     display: grid;
     grid-template-rows: 1fr;
@@ -254,7 +258,6 @@ footer div{
 }
 #habUno{
     grid-area: habitacion1;
-    /* background-color: aqua; */
     padding: 15px;
     margin-top: 10px;
     display: flex;
@@ -263,7 +266,6 @@ footer div{
 }
 #habDos{
     grid-area: habitacion2; 
-    /* background-color: rgb(109, 241, 43); */
     padding: 15px;
     margin-top: 10px;
     display: flex;
@@ -272,7 +274,6 @@ footer div{
 }
 #habTres{
     grid-area: habitacion3;
-    /* background-color: rgb(67, 58, 201); */
     padding: 15px;
     margin-top: 10px;
     display: flex;
@@ -294,7 +295,6 @@ footer div{
     "conocenos video";
     justify-items: center;
     align-items:center;
-    
 }
 .conocenos{
     grid-area: conocenos;
@@ -305,12 +305,53 @@ footer div{
     grid-area: video;
     
     padding: 10px;
-    
+}
+/* PAGINA DE CONTACTO */
+
+#mainContact{
+    height:73vh ;
+    background-color: #d6faac;
+   display: flex;
+   justify-content: center;
+   justify-items: center;
+}
+form{
+    box-shadow: 3px 5px 5px -3px  ;
+    background-color: #bee98a;
+    border-radius: 10px;
+    width:370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
 }
 
-
-
-
+h3{
+    margin: 10px;
+    color: #393737;
+    text-align: center;
+    font-style: italic;
+}
+label{
+  margin-left: 60px;
+}
+.imputCont{
+   background-color:  #bee98a;
+    padding: 3px;
+    margin: 10px;
+    border: none;
+    border-bottom:2px solid #a7aba1;
+}
+.boton{
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #9ccc65;
+    margin: 10px;
+}
+.boton:hover{
+    background-color: antiquewhite;
+}
 
 @media(max-width:1400px) {
 }
@@ -322,8 +363,10 @@ footer div{
 }
 @media(max-width:600px) {
 }
-@media(max-width:480px){
+@media(max-width:425px){
     
+    /* HEADER */
+
     header{
         height: 15vh;
         background-image:linear-gradient(#d4fea4, #84ff00);
@@ -376,6 +419,7 @@ footer div{
     .lista{
         display: inline-block; 
      }
+     /* FOOTER */
     
     footer{
         background-color: #9ccc65;
@@ -384,6 +428,7 @@ footer div{
         flex-direction: column;
         flex-wrap: wrap;
         align-items: center;
+       
         
     }
     footer div{
@@ -394,6 +439,64 @@ footer div{
         height: 15px;}
     .numTel,.mail{
         padding-left: 5px;
+    }
+
+    /* MAIN DE INICIO*/
+
+main{
+    
+    width: 100vw;
+    grid-area: main;
+    height:73vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:1fr 1fr ;
+    grid-template-areas: 
+    "sectionuno"
+    "sectiondos";
+}
+.sectionUno{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    grid-area: sectionuno;
+    align-self: center;
+ }
+ .sectionDos{ 
+     width: 100vw;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     grid-area: sectiondos;
+     align-self: center;}
+     .foto{
+        height: 180px;
+        width: 300px;
+        margin: 10px;
+    }
+    .parrafo1{ 
+        color: rgb(152, 107, 3);
+        font-style: italic;
+        text-align:left;
+        font-size: 0.8rem;
+    }
+    .titulo{
+        padding: 10px 0px;
+    } 
+
+    /* MAIN PAGINA DE SERVICIO */
+
+    #mainServ{
+    
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns:1fr  ;
+        grid-template-areas:
+        "resto" 
+        "excursion"
+        "spa";
+        overflow: scroll;
     }
     
     /* MAIN DE LA PAGINA HABITACIONES */
@@ -411,28 +514,24 @@ footer div{
     }
     #habUno{
         grid-area: habitacion1;
-        /* background-color: aqua; */
         padding: 10px;
         display: flex;
         flex-direction: row;
     }
     #habDos{
         grid-area: habitacion2; 
-        /* background-color: rgb(109, 241, 43); */
         padding: 10px;
         display: flex;
         flex-direction: row;
     }
     #habTres{
         grid-area: habitacion3;
-        /* background-color: rgb(67, 58, 201); */
         padding: 10px;
         display: flex;
         flex-direction: row;
     }
     #mainHab div img{
         height: 80px;
-        
     }
 
     /* MAIN DE LA PAGINA NOSOTROS */
@@ -449,11 +548,8 @@ footer div{
     }
     iframe{
         height: 200px;
-      
     }
-
 }
-
-
 @media(max-width:320px) {
 }
+
