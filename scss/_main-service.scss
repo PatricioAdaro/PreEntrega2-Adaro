@@ -1,0 +1,59 @@
+body{
+    #mainServ{
+        background-color: $background-main;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns:1fr 1fr 1fr ;
+        grid-template-areas:
+        "resto excursion spa";
+        .resto{
+            grid-area: resto;
+            @include flexBox(column, center, flex-end, wrap);
+            img{
+                @include reset-img-servicio;
+            }
+            h2{
+                margin:$margin-h2-servicio
+            }
+            p{
+                margin: $margin-p-servicio;
+            }
+        }
+        .excursion{
+            grid-area: excursion;
+            @include flexBox(column, center, flex-end, wrap);
+            img{
+                @include reset-img-servicio;
+            }
+            h2{
+                margin:$margin-h2-servicio;
+            }
+            p{
+                margin: $margin-p-servicio;
+            }
+        }
+        .spa{
+            grid-area: spa;
+            @include flexBox(column, center, flex-end, wrap);
+            img{
+                @include reset-img-servicio;
+            }
+            h2{
+                margin:$margin-h2-servicio;
+            }
+            p{
+                margin: $margin-p-servicio;
+            }
+        }
+        @keyframes motion {
+            from{
+                transform: scale(0);
+                opacity: 0;
+            }
+            to{
+                transform: scale(1 , 1);
+                opacity: 1;
+            }
+        }
+    }
+}

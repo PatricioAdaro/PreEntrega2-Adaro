@@ -90,7 +90,6 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-  
     grid-area: sectiondos;
    
  }
@@ -361,7 +360,8 @@ label{
 }
 @media(max-width:600px) {
 }
-@media(max-width:425px){
+
+
     
     /* HEADER */
 
@@ -576,7 +576,7 @@ main{
          border: none;
          border-bottom:2px solid #a7aba1;
      }
-}
+
 @media(max-width:320px) {
 }
 

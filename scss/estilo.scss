@@ -1,0 +1,16 @@
+
+* {
+    Margin:0;
+    padding:0;
+    box-sizing: border-box; 
+}
+@import"./variables";
+@import"./mixin";
+@import"./header";
+@import"./main-inicio";
+@import"./main-service";
+@import"./main-habitaciones";
+@import"./main-nosotros";
+@import"./main-contacto";
+@import"./footer";
+@import"./media-queries";

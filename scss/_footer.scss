@@ -1,0 +1,41 @@
+body{
+    footer{
+        background-color: $color-bases;
+        height: 12vh;
+        grid-area: footer;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .telFooter{
+                height: 30px;
+            }
+            .numTel{
+                padding-left: 5px;
+            }
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .textFooter{
+                height: 30px;
+            }
+        }
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .mailFooter{
+                height: 30px;
+            }  
+            .mail{
+                padding-left: 5px;
+            }
+        }
+    }
+}

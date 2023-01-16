@@ -1,0 +1,463 @@
+* {
+  Margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "header header" "main main" "footer footer"; }
+  body header {
+    height: 15vh;
+    background-image: linear-gradient(#d4fea4, #84ff00);
+    grid-area: header;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; }
+    body header .logo {
+      display: inline-block;
+      background-color: #CCFF00;
+      padding: 15px;
+      text-align: center;
+      border-radius: 100%;
+      animation-name: logohotel;
+      animation-duration: 2s; }
+      body header .logo h1 {
+        color: #43175d;
+        display: inline;
+        font-size: 0.9rem; }
+
+@keyframes logohotel {
+  from {
+    transform: rotate(0);
+    opacity: 0; }
+  to {
+    transform: rotate(360deg);
+    opacity: 1; } }
+    body header .nav .vineta {
+      display: flex;
+      flex-direction: row; }
+      body header .nav .vineta .lista {
+        display: inline;
+        text-align: center; }
+        body header .nav .vineta .lista .item {
+          color: black;
+          text-decoration: none;
+          background-color: #9ccc65;
+          padding: 2px;
+          margin-inline: 10px;
+          margin-bottom: 25px;
+          border-radius: 5px; }
+
+body main {
+  width: 100vw;
+  background-color: #d6faac;
+  grid-area: main;
+  height: 73vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  body main .sectionUno {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-area: sectionuno; }
+    body main .sectionUno .foto {
+      height: 70vh;
+      width: 45vw; }
+  body main .sectionDos {
+    width: 50vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    grid-area: sectiondos; }
+    body main .sectionDos div .titulo {
+      padding: 20px 0px; }
+    body main .sectionDos div .parrafo1 {
+      color: #042c0d;
+      font-style: italic;
+      text-align: left;
+      font-size: 1.2rem; }
+
+body #mainServ {
+  background-color: #d6faac;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "resto excursion spa"; }
+  body #mainServ .resto {
+    grid-area: resto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap; }
+    body #mainServ .resto img {
+      height: 200px;
+      width: 350px;
+      margin: 1px 40px 1px 40px;
+      animation-name: motion;
+      animation-duration: 3s; }
+    body #mainServ .resto h2 {
+      margin: 40px 80px 5px 40px; }
+    body #mainServ .resto p {
+      margin: 0px 80px 0px 40px; }
+  body #mainServ .excursion {
+    grid-area: excursion;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap; }
+    body #mainServ .excursion img {
+      height: 200px;
+      width: 350px;
+      margin: 1px 40px 1px 40px;
+      animation-name: motion;
+      animation-duration: 3s; }
+    body #mainServ .excursion h2 {
+      margin: 40px 80px 5px 40px; }
+    body #mainServ .excursion p {
+      margin: 0px 80px 0px 40px; }
+  body #mainServ .spa {
+    grid-area: spa;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    flex-wrap: wrap; }
+    body #mainServ .spa img {
+      height: 200px;
+      width: 350px;
+      margin: 1px 40px 1px 40px;
+      animation-name: motion;
+      animation-duration: 3s; }
+    body #mainServ .spa h2 {
+      margin: 40px 80px 5px 40px; }
+    body #mainServ .spa p {
+      margin: 0px 80px 0px 40px; }
+
+@keyframes motion {
+  from {
+    transform: scale(0);
+    opacity: 0; }
+  to {
+    transform: scale(1, 1);
+    opacity: 1; } }
+
+body #mainHab {
+  background-color: #d6faac;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "habitacion1 habitacion2 habitacion3";
+  justify-items: center;
+  align-items: start; }
+  body #mainHab #habUno {
+    grid-area: habitacion1;
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    body #mainHab #habUno h2 {
+      margin-bottom: 20px; }
+    body #mainHab #habUno img {
+      height: 200px;
+      padding-top: 10px; }
+  body #mainHab #habDos {
+    grid-area: habitacion2;
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    body #mainHab #habDos h2 {
+      margin-bottom: 20px; }
+    body #mainHab #habDos img {
+      height: 200px;
+      padding-top: 10px; }
+  body #mainHab #habTres {
+    grid-area: habitacion3;
+    padding: 15px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; }
+    body #mainHab #habTres h2 {
+      margin-bottom: 20px; }
+    body #mainHab #habTres img {
+      height: 200px;
+      padding-top: 10px; }
+
+body #mainNos {
+  background-color: #d6faac;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "conocenos video";
+  justify-items: center;
+  align-items: center; }
+  body #mainNos .conocenos {
+    grid-area: conocenos;
+    padding: 10px; }
+  body #mainNos .video {
+    grid-area: video;
+    padding: 10px; }
+
+body #mainContact {
+  height: 73vh;
+  background-color: #d6faac;
+  display: flex;
+  justify-content: center;
+  justify-items: center; }
+  body #mainContact .container h3 {
+    margin: 10px;
+    color: #393737;
+    text-align: center;
+    font-style: italic; }
+  body #mainContact .container form {
+    box-shadow: 3px 5px 5px -3px;
+    background-color: #bee98a;
+    border-radius: 10px;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    body #mainContact .container form label {
+      margin-left: 60px; }
+      body #mainContact .container form label .imputCont {
+        background-color: #bee98a;
+        padding: 3px;
+        margin: 10px;
+        border: none;
+        border-bottom: 2px solid #a7aba1; }
+    body #mainContact .container form .boton {
+      padding: 5px;
+      border: none;
+      border-radius: 5px;
+      background-color: #9ccc65;
+      margin: 10px; }
+    body #mainContact .container form .boton:hover {
+      background-color: antiquewhite; }
+
+body footer {
+  background-color: #9ccc65;
+  height: 12vh;
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around; }
+  body footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body footer div .telFooter {
+      height: 30px; }
+    body footer div .numTel {
+      padding-left: 5px; }
+  body footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body footer div .textFooter {
+      height: 30px; }
+  body footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    body footer div .mailFooter {
+      height: 30px; }
+    body footer div .mail {
+      padding-left: 5px; }
+
+@media (max-width: 425px) {
+  body header {
+    height: 15vh;
+    background-image: linear-gradient(#d4fea4, #84ff00);
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "logo"  "nav";
+    justify-items: center;
+    align-items: center; }
+    body header .logo {
+      display: inline-block;
+      background-color: #CCFF00;
+      padding: 2px;
+      text-align: center;
+      border-radius: 100%;
+      animation-name: logohotel;
+      animation-duration: 2s; }
+      body header .logo h1 {
+        color: #43175d;
+        display: inline;
+        font-size: 0.5rem; }
+  @keyframes logohotel {
+    from {
+      transform: rotate(0);
+      opacity: 0; }
+    to {
+      transform: rotate(360deg);
+      opacity: 1; } }
+    body header .nav .vineta .lista {
+      display: inline-block; }
+      body header .nav .vineta .lista .item {
+        color: black;
+        text-decoration: none;
+        background-color: #9ccc65;
+        padding: 2px;
+        margin-inline: 10px;
+        margin-bottom: 25px;
+        border-radius: 5px;
+        transition: 1s; }
+  body footer {
+    background-color: #9ccc65;
+    height: 12vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center; }
+    body footer div {
+      flex-basis: 1;
+      flex-grow: 100%; }
+      body footer div .telFooter {
+        height: 15px; }
+      body footer div .numTel {
+        padding-left: 5px; }
+    body footer div {
+      flex-basis: 1;
+      flex-grow: 100%; }
+      body footer div .textFooter {
+        height: 15px; }
+    body footer div {
+      flex-basis: 1;
+      flex-grow: 100%; }
+      body footer div .mailFooter {
+        height: 15px; }
+      body footer div .mail {
+        padding-left: 5px; }
+  body main {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "sectionuno" "sectiondos"; }
+    body main .sectionUno {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-area: sectionuno;
+      align-self: center; }
+      body main .sectionUno .foto {
+        height: 180px;
+        width: 300px;
+        margin: 10px; }
+    body main .sectionDos {
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      grid-area: sectiondos;
+      align-self: center; }
+      body main .sectionDos div .titulo {
+        padding: 10px 0px; }
+      body main .sectionDos div .parrafo1 {
+        color: #986b03;
+        font-style: italic;
+        text-align: left;
+        font-size: 0.8rem; }
+  body #mainServ {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "resto"  "excursion" "spa";
+    justify-content: center;
+    align-items: center;
+    overflow: scroll; }
+    body #mainServ .resto h2 {
+      margin: 10px 0px 5px 40px; }
+    body #mainServ .resto p {
+      margin-left: 40px;
+      margin-bottom: 50px; }
+    body #mainServ .excursion h2 {
+      margin: 10px 0px 5px 40px; }
+    body #mainServ .excursion p {
+      margin-left: 40px;
+      margin-bottom: 50px; }
+    body #mainServ .spa h2 {
+      margin: 10px 0px 5px 40px; }
+    body #mainServ .spa p {
+      margin-left: 40px;
+      margin-bottom: 50px; }
+  @keyframes motion {
+    from {
+      transform: scale(0);
+      opacity: 0; }
+    to {
+      transform: scale(1, 1);
+      opacity: 1; } }
+  body #mainHab {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "habitacion1 " "habitacion2 " "habitacion3";
+    justify-items: center;
+    align-items: stretch; }
+    body #mainHab #habUno {
+      grid-area: habitacion1;
+      padding: 10px;
+      display: flex;
+      flex-direction: row; }
+      body #mainHab #habUno img {
+        height: 80px; }
+    body #mainHab #habDos {
+      grid-area: habitacion2;
+      padding: 10px;
+      display: flex;
+      flex-direction: row; }
+      body #mainHab #habDos img {
+        height: 80px; }
+    body #mainHab #habTres {
+      grid-area: habitacion3;
+      padding: 10px;
+      display: flex;
+      flex-direction: row; }
+      body #mainHab #habTres img {
+        height: 80px; }
+  body #mainNos {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "conocenos " "video";
+    justify-items: center;
+    align-items: center; }
+    body #mainNos .video {
+      height: 200px; }
+  body #mainContact .container form {
+    box-shadow: 3px 5px 5px -3px;
+    background-color: #bee98a;
+    border-radius: 10px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    body #mainContact .container form label .imputCont {
+      background-color: #bee98a;
+      padding: 2px;
+      margin: 5px;
+      border: none;
+      border-bottom: 2px solid #a7aba1; } }

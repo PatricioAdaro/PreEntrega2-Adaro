@@ -1,0 +1,279 @@
+@media(max-width:425px){
+    // HEADER
+    body{
+        header{
+            height: 15vh;
+            background-image:linear-gradient(#d4fea4, #84ff00);
+            display: grid;
+            grid-template-rows:1fr 1fr ;
+            grid-template-columns:1fr ;
+            grid-template-areas:
+            "logo" 
+            "nav";
+            justify-items: center;
+            align-items: center;
+            .logo{
+                display:inline-block;
+                background-color: #CCFF00 ;
+                padding: 2px;
+                text-align: center;
+                border-radius: 100%;
+                animation-name: logohotel;
+                animation-duration: 2s;
+                h1{
+                    color: #43175d;
+                    display: inline;
+                    font-size: 0.5rem;  
+                }
+            }
+            @keyframes logohotel {
+                from{
+                    transform:  rotate(0);
+                    opacity: 0;
+                }
+                to{
+                    transform:  rotate(360deg);
+                    opacity: 1;
+                }
+            }
+    
+            .nav{
+                .vineta{
+                    
+                    .lista{
+                        display: inline-block; 
+                        .item{
+                            color: rgb(0, 0, 0);
+                            text-decoration: none;
+                            background-color:#9ccc65;
+                            padding: 2px;
+                            margin-inline: 10px;
+                            margin-bottom: 25px;
+                            border-radius: 5px;
+                            transition: 1s; 
+                        }
+                    }
+                }
+            }
+        }
+      
+        // FOOTER
+        
+        footer{
+            background-color: $color-bases;
+            height: 12vh;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            div{
+                flex-basis: 1;
+                flex-grow: 100%;
+                .telFooter{
+                    height: 15px;  
+                }
+                .numTel{
+                    padding-left: 5px;  
+                }
+            }
+            div{
+                flex-basis: 1;
+                flex-grow: 100%;
+                .textFooter{
+                    height: 15px; 
+                }
+            }
+            div{
+                flex-basis: 1;
+                flex-grow: 100%;
+                .mailFooter{
+                    height: 15px; 
+                }  
+                .mail{
+                    padding-left: 5px;
+                }
+            }
+        }
+
+        // MAIN DE INICIO
+
+        main{
+           
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows:1fr 1fr ;
+            grid-template-areas: 
+            "sectionuno"
+            "sectiondos";
+            .sectionUno{
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-area: sectionuno;
+                align-self: center;
+                .foto{
+                    height: 180px;
+                    width: 300px;
+                    margin: 10px;
+                }
+            }
+            .sectionDos{
+                width: 100vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                grid-area: sectiondos;
+                align-self: center;
+                div{
+                    .titulo{
+                        padding: 10px 0px;
+                    }
+                    .parrafo1{
+                        color: rgb(152, 107, 3);
+                        font-style: italic;
+                        text-align:left;
+                        font-size: 0.8rem;   
+                    }
+                }
+            }
+        }
+
+        // MAIN DE SERVICIOS
+
+        #mainServ{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns:1fr  ;
+            grid-template-areas:
+            "resto" 
+            "excursion"
+            "spa";
+            justify-content: center;
+            align-items: center;
+            overflow: scroll;
+            .resto{
+                h2{
+                    margin:10px 0px 5px 40px; 
+                }
+                p{
+                    margin-left: 40px;
+                    margin-bottom: 50px;  
+                }
+            }
+            .excursion{
+                h2{
+                    margin:10px 0px 5px 40px;
+                }
+                p{
+                    margin-left: 40px;
+                    margin-bottom: 50px; 
+                }
+            }
+            .spa{
+                h2{
+                    margin:10px 0px 5px 40px; 
+                }
+                p{
+                    margin-left: 40px;
+                    margin-bottom: 50px; 
+                }
+            }
+            @keyframes motion {
+                from{
+                    transform: scale(0);
+                    opacity: 0;
+                }
+                to{
+                    transform: scale(1 , 1);
+                    opacity: 1;
+                }
+            }
+        }
+
+        // MAIN HABITACIONES
+
+        #mainHab{
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns:1fr ;
+            grid-template-areas: 
+            "habitacion1 "
+            "habitacion2 "
+            "habitacion3";
+            justify-items:center;
+            align-items: stretch;
+            #habUno{
+                grid-area: habitacion1;
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                img{
+                    height: 80px;
+                }
+            }
+            #habDos{
+                grid-area: habitacion2; 
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                
+                img{
+                    height: 80px;
+                }
+            }
+            #habTres{
+                grid-area: habitacion3;
+                padding: 10px;
+                display: flex;
+                flex-direction: row;
+                img{
+                    height: 80px;  
+                }
+            }
+        }
+        // MAIN NOSOTROS
+
+        #mainNos{
+            display: grid;
+            grid-template-rows:1fr 1fr;
+            grid-template-columns:1fr  ;
+            grid-template-areas: 
+            "conocenos "
+            "video";
+            justify-items: center;
+            align-items: center;
+            .video{
+                height: 200px;   
+            }
+        }
+        
+        // MAIN DE CONTACTO
+
+        #mainContact{
+            
+            .container{
+                
+
+                form{
+                    box-shadow: 3px 5px 5px -3px  ;
+                    background-color: #bee98a;
+                    border-radius: 10px;
+                    width:350px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    label{
+                        .imputCont{
+                                background-color:  #bee98a;
+                                padding: 2px;
+                                margin: 5px;
+                                border: none;
+                                border-bottom:2px solid #a7aba1;
+                        }
+                    }
+                }
+            }
+        }    
+    }
+}

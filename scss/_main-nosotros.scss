@@ -1,0 +1,20 @@
+body{
+    #mainNos{
+        background-color: $background-main;
+        display: grid;
+        grid-template-rows:1fr ;
+        grid-template-columns:1fr 1fr ;
+        grid-template-areas: 
+        "conocenos video";
+        justify-items: center;
+        align-items:center;
+        .conocenos{
+            grid-area: conocenos;
+            padding: 10px;  
+        }
+        .video{
+            grid-area: video;
+            padding: 10px;
+        }
+    }
+}

@@ -1,0 +1,45 @@
+body{
+    #mainHab{
+        background-color: $background-main;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns:1fr 1fr 1fr;
+        grid-template-areas: 
+        "habitacion1 habitacion2 habitacion3";
+        justify-items:center;
+        align-items: start;
+        #habUno{
+            grid-area: habitacion1;
+           @include reset-habitaciones;
+            h2{
+                margin-bottom: 20px;
+            }
+            img{
+                height:  $heigth-img-hab;
+                padding-top: 10px;
+            }
+        }
+        #habDos{
+            grid-area: habitacion2; 
+            @include reset-habitaciones;
+            h2{
+                margin-bottom: 20px;
+            }
+            img{
+                height: $heigth-img-hab ;
+                padding-top: 10px;
+            }
+        }
+        #habTres{
+            grid-area: habitacion3;
+            @include reset-habitaciones;
+            h2{
+                margin-bottom: 20px;
+            }
+            img{
+                height: $heigth-img-hab;
+                padding-top: 10px;
+            }
+        }
+    }
+}
