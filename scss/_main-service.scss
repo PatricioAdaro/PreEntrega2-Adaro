@@ -8,7 +8,7 @@ body{
         "resto excursion spa";
         .resto{
             grid-area: resto;
-            @include flexBox(column, center, flex-end, wrap);
+            @include flexBox(column, center, flex-start, wrap);
             img{
                 @include reset-img-servicio;
             }
@@ -21,7 +21,7 @@ body{
         }
         .excursion{
             grid-area: excursion;
-            @include flexBox(column, center, flex-end, wrap);
+            @include flexBox(column, center, flex-start, wrap);
             img{
                 @include reset-img-servicio;
             }
@@ -34,7 +34,7 @@ body{
         }
         .spa{
             grid-area: spa;
-            @include flexBox(column, center, flex-end, wrap);
+            @include flexBox(column, center, flex-start, wrap);
             img{
                 @include reset-img-servicio;
             }

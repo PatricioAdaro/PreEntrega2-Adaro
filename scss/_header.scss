@@ -58,6 +58,10 @@ body{
                         margin-inline: 10px;
                         margin-bottom: 25px;
                         border-radius: 5px;
+                        transition: 1s;
+                    }
+                    .item:hover {
+                        background-color: #dbefc3;
                     }
                 }
             }
