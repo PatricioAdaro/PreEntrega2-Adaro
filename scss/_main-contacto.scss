@@ -3,45 +3,48 @@ body{
         height:73vh ;
         background-color:$background-main;
         display: flex;
-        justify-content: center;
-        justify-items: center;
-        .container{
-            h3{
-            margin: 10px;
+        justify-content: space-around;
+        justify-items: strech;
+        p{  
             color: #393737;
             text-align: center;
             font-style: italic;
-            }
-            form{
-                box-shadow: 3px 5px 5px -3px  ;
-                background-color:$color-form;
-                border-radius: 10px;
-                width:370px;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                label{
-                    margin-left: 60px;
-                    .imputCont{
-                        background-color: $color-form;
-                        padding: 3px;
-                        margin: 10px;
-                        border: none;
-                        border-bottom:2px solid #a7aba1;
-                    } 
-                }
-                
-                .boton{
-                    padding: 5px;
+            font-size: 2rem;
+            align-self: center;
+        }
+        .form{
+            margin: 10px;
+            box-shadow: 3px 5px 5px -3px  ;
+            background-color:$color-form;
+            border-radius: 10px;
+            width:400px;
+            label{
+                width: 90%;
+                display:block;
+                margin: 20px 0px 0px 20px;
+                .imputCont{
+                    background-color: $color-form;
+                    width: 100%;
+                    outline: none;
                     border: none;
-                    border-radius: 5px;
-                    background-color:$color-bases;
-                    margin: 10px;
+                    border-bottom:2px solid #a7aba1;
                 }
-                .boton:hover{
-                    background-color: antiquewhite;
-                }
+                textarea{
+                    width: 359px;
+                    height: 100px;
+                } 
+            }
+            .boton{
+                width: 47%;
+                margin-left: 6px;
+                padding: 10px;
+                border: none;
+                border-radius: 5px;
+                background-image:linear-gradient(#ffffff, #a5f74e);
+            }
+            .boton:active{
+                background-image:linear-gradient(#a5f74e,#ffffff);
             }
         }
-    }
-}    
+    }      
+}     

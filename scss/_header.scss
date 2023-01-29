@@ -1,7 +1,6 @@
 body{
     height: 100vh;
     width: 100vw;
-    overflow-x: hidden;
     display: grid;
     grid-template-rows:1fr 1fr 1fr ;
     grid-template-columns:1fr 1fr;
@@ -11,7 +10,7 @@ body{
     "footer footer";
     header{
         height: 15vh;
-        background-image:linear-gradient(#d4fea4, #84ff00);
+        background-image:linear-gradient(#ffffff, #a5f74e);
         grid-area: header;
         display: flex;
         flex-direction: row;
@@ -21,7 +20,8 @@ body{
         .logo{
             display:inline-block;
             background-color: #CCFF00 ;
-            padding: 15px;
+            margin: 5px;
+            padding: 3px;
             text-align: center;
             border-radius: 100%;
             animation-name: logohotel;
@@ -29,7 +29,8 @@ body{
             h1{
                 color: #43175d;
                 display: inline;
-                font-size: 0.9rem;
+                font-size: 1.3rem; 
+                font-style: italic; 
             }
         }
         @keyframes logohotel {
@@ -52,6 +53,7 @@ body{
                     text-align: center;
                     .item{
                         color: rgb(0, 0, 0);
+                        font-style: italic;
                         text-decoration: none;
                         background-color:#9ccc65;
                         padding: 2px;

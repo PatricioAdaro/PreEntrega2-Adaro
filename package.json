@@ -1,7 +1,8 @@
 {
   "name": "proyectohotel",
   "version": "1.0.0",
-  "description": "",
+  "description":"sitio web de hotel con cinco paginas de navegacion: inicio, servicios, habitaciones,nosotros y contacto",  
+  
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

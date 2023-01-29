@@ -6,14 +6,13 @@
 body {
   height: 100vh;
   width: 100vw;
-  overflow-x: hidden;
   display: grid;
   grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: "header header" "main main" "footer footer"; }
   body header {
     height: 15vh;
-    background-image: linear-gradient(#d4fea4, #84ff00);
+    background-image: linear-gradient(#ffffff, #a5f74e);
     grid-area: header;
     display: flex;
     flex-direction: row;
@@ -23,7 +22,8 @@ body {
     body header .logo {
       display: inline-block;
       background-color: #CCFF00;
-      padding: 15px;
+      margin: 5px;
+      padding: 3px;
       text-align: center;
       border-radius: 100%;
       animation-name: logohotel;
@@ -31,7 +31,8 @@ body {
       body header .logo h1 {
         color: #43175d;
         display: inline;
-        font-size: 0.9rem; }
+        font-size: 1.3rem;
+        font-style: italic; }
 
 @keyframes logohotel {
   from {
@@ -48,6 +49,7 @@ body {
         text-align: center; }
         body header .nav .vineta .lista .item {
           color: black;
+          font-style: italic;
           text-decoration: none;
           background-color: #9ccc65;
           padding: 2px;
@@ -59,10 +61,10 @@ body {
           background-color: #dbefc3; }
 
 body main {
+  height: 73vh;
   width: 100vw;
   background-color: #d6faac;
   grid-area: main;
-  height: 73vh;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -73,20 +75,21 @@ body main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    grid-area: sectionuno; }
-    body main .sectionUno .foto {
-      height: 70vh;
-      width: 45vw; }
+    flex-wrap: wrap; }
+    body main .sectionUno div .foto {
+      border-radius: 10px;
+      height: 430px;
+      width: 600px; }
   body main .sectionDos {
     width: 50vw;
+    padding: 15px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    grid-area: sectiondos; }
+    flex-wrap: wrap; }
     body main .sectionDos div .titulo {
+      font-size: 2.5rem;
       padding: 20px 0px; }
     body main .sectionDos div .parrafo1 {
       color: #042c0d;
@@ -95,6 +98,8 @@ body main {
       font-size: 1.2rem; }
 
 body #mainServ {
+  grid-area: main;
+  height: 73vh;
   background-color: #d6faac;
   display: grid;
   grid-template-rows: 1fr;
@@ -104,51 +109,54 @@ body #mainServ {
     grid-area: resto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: flex-start;
     flex-wrap: wrap; }
     body #mainServ .resto img {
+      border-radius: 10px;
       height: 200px;
-      width: 350px;
-      margin: 1px 40px 1px 40px;
+      width: 330px;
+      margin: 30px 40px 1px 40px;
       animation-name: motion;
       animation-duration: 3s; }
     body #mainServ .resto h2 {
-      margin: 40px 40px 5px 40px; }
+      margin: 20px 40px 5px 40px; }
     body #mainServ .resto p {
       margin: 0px 40px 0px 40px; }
   body #mainServ .excursion {
     grid-area: excursion;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: flex-start;
     flex-wrap: wrap; }
     body #mainServ .excursion img {
+      border-radius: 10px;
       height: 200px;
-      width: 350px;
-      margin: 1px 40px 1px 40px;
+      width: 330px;
+      margin: 30px 40px 1px 40px;
       animation-name: motion;
       animation-duration: 3s; }
     body #mainServ .excursion h2 {
-      margin: 40px 40px 5px 40px; }
+      margin: 20px 40px 5px 40px; }
     body #mainServ .excursion p {
       margin: 0px 40px 0px 40px; }
   body #mainServ .spa {
     grid-area: spa;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: flex-start;
     flex-wrap: wrap; }
     body #mainServ .spa img {
+      border-radius: 10px;
       height: 200px;
-      width: 350px;
-      margin: 1px 40px 1px 40px;
+      width: 330px;
+      margin: 30px 40px 1px 40px;
       animation-name: motion;
       animation-duration: 3s; }
     body #mainServ .spa h2 {
-      margin: 40px 40px 5px 40px; }
+      margin: 20px 40px 5px 40px; }
     body #mainServ .spa p {
       margin: 0px 40px 0px 40px; }
 
@@ -167,40 +175,47 @@ body #mainHab {
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas: "habitacion1 habitacion2 habitacion3";
   justify-items: center;
-  align-items: start; }
+  align-items: center; }
   body #mainHab #habUno {
     grid-area: habitacion1;
+    border: 2px solid black;
+    border-radius: 10px;
     padding: 15px;
-    margin-top: 20px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; }
+    align-items: center; }
     body #mainHab #habUno h2 {
-      margin-bottom: 20px; }
+      margin-bottom: 5px; }
     body #mainHab #habUno img {
       height: 200px;
+      width: 310px;
       padding-top: 10px; }
   body #mainHab #habDos {
     grid-area: habitacion2;
+    border: 2px solid black;
+    border-radius: 10px;
     padding: 15px;
-    margin-top: 20px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; }
+    align-items: center; }
     body #mainHab #habDos h2 {
-      margin-bottom: 20px; }
+      margin-bottom: 5px; }
     body #mainHab #habDos img {
       height: 200px;
       padding-top: 10px; }
   body #mainHab #habTres {
     grid-area: habitacion3;
+    border: 2px solid black;
+    border-radius: 10px;
     padding: 15px;
-    margin-top: 20px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
-    align-items: flex-start; }
+    align-items: center; }
     body #mainHab #habTres h2 {
-      margin-bottom: 20px; }
+      margin-bottom: 5px; }
     body #mainHab #habTres img {
       height: 200px;
       padding-top: 10px; }
@@ -216,45 +231,61 @@ body #mainNos {
   body #mainNos .conocenos {
     grid-area: conocenos;
     padding: 10px; }
+    body #mainNos .conocenos h4 {
+      font-size: 1.5rem;
+      text-align: center;
+      margin: 30px; }
+    body #mainNos .conocenos p {
+      font-size: 1.1rem;
+      text-align: center; }
   body #mainNos .video {
     grid-area: video;
     padding: 10px; }
+    body #mainNos .video iframe {
+      height: 400px;
+      width: 600px;
+      border-radius: 10px; }
 
 body #mainContact {
   height: 73vh;
   background-color: #d6faac;
   display: flex;
-  justify-content: center;
-  justify-items: center; }
-  body #mainContact .container h3 {
-    margin: 10px;
+  justify-content: space-around;
+  justify-items: strech; }
+  body #mainContact p {
     color: #393737;
     text-align: center;
-    font-style: italic; }
-  body #mainContact .container form {
+    font-style: italic;
+    font-size: 2rem;
+    align-self: center; }
+  body #mainContact .form {
+    margin: 10px;
     box-shadow: 3px 5px 5px -3px;
     background-color: #bee98a;
     border-radius: 10px;
-    width: 370px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    body #mainContact .container form label {
-      margin-left: 60px; }
-      body #mainContact .container form label .imputCont {
+    width: 400px; }
+    body #mainContact .form label {
+      width: 90%;
+      display: block;
+      margin: 20px 0px 0px 20px; }
+      body #mainContact .form label .imputCont {
         background-color: #bee98a;
-        padding: 3px;
-        margin: 10px;
+        width: 100%;
+        outline: none;
         border: none;
         border-bottom: 2px solid #a7aba1; }
-    body #mainContact .container form .boton {
-      padding: 5px;
+      body #mainContact .form label textarea {
+        width: 359px;
+        height: 100px; }
+    body #mainContact .form .boton {
+      width: 47%;
+      margin-left: 6px;
+      padding: 10px;
       border: none;
       border-radius: 5px;
-      background-color: #9ccc65;
-      margin: 10px; }
-    body #mainContact .container form .boton:hover {
-      background-color: antiquewhite; }
+      background-image: linear-gradient(#ffffff, #a5f74e); }
+    body #mainContact .form .boton:active {
+      background-image: linear-gradient(#a5f74e, #ffffff); }
 
 body footer {
   background-color: #9ccc65;
@@ -287,125 +318,80 @@ body footer {
     body footer div .mail {
       padding-left: 5px; }
 
-@media (max-width: 425px) {
-  body header {
-    height: 15vh;
-    background-image: linear-gradient(#d4fea4, #84ff00);
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "logo"  "nav";
-    justify-items: center;
-    align-items: center; }
-    body header .logo {
-      display: inline-block;
-      background-color: #CCFF00;
-      padding: 2px;
-      text-align: center;
-      border-radius: 100%;
-      animation-name: logohotel;
-      animation-duration: 2s; }
-      body header .logo h1 {
-        color: #43175d;
-        display: inline;
-        font-size: 0.5rem; }
-  @keyframes logohotel {
-    from {
-      transform: rotate(0);
-      opacity: 0; }
-    to {
-      transform: rotate(360deg);
-      opacity: 1; } }
-    body header .nav .vineta .lista {
-      display: inline-block; }
-      body header .nav .vineta .lista .item {
-        color: black;
-        text-decoration: none;
-        background-color: #9ccc65;
-        padding: 2px;
-        margin-inline: 10px;
-        margin-bottom: 25px;
-        border-radius: 5px;
-        transition: 1s; }
-  body footer {
-    background-color: #9ccc65;
-    height: 12vh;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center; }
-    body footer div {
-      flex-basis: 1;
-      flex-grow: 100%; }
-      body footer div .telFooter {
-        height: 15px; }
-      body footer div .numTel {
-        padding-left: 5px; }
-    body footer div {
-      flex-basis: 1;
-      flex-grow: 100%; }
-      body footer div .textFooter {
-        height: 15px; }
-    body footer div {
-      flex-basis: 1;
-      flex-grow: 100%; }
-      body footer div .mailFooter {
-        height: 15px; }
-      body footer div .mail {
-        padding-left: 5px; }
+@media (max-width: 768px) {
   body main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-    grid-template-areas: "sectionuno" "sectiondos"; }
+    background-color: #d6faac;
+    grid-area: main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around; }
     body main .sectionUno {
-      width: 100vw;
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      grid-area: sectionuno;
-      align-self: center; }
-      body main .sectionUno .foto {
-        height: 180px;
-        width: 300px;
-        margin: 10px; }
+      flex-wrap: wrap; }
+      body main .sectionUno div .foto {
+        border-radius: 10px;
+        height: 290px;
+        width: 370px; }
     body main .sectionDos {
-      width: 100vw;
+      padding: 15px;
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
-      grid-area: sectiondos;
-      align-self: center; }
+      flex-wrap: wrap; }
       body main .sectionDos div .titulo {
-        padding: 10px 0px; }
+        font-size: 1.5rem;
+        padding: 20px 0px; }
       body main .sectionDos div .parrafo1 {
-        color: #986b03;
+        color: #042c0d;
         font-style: italic;
         text-align: left;
-        font-size: 0.8rem; }
-  body #mainServ {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "resto"  "excursion" "spa";
-    justify-content: center;
-    align-items: center;
-    overflow: scroll; }
-    body #mainServ .resto h2 {
-      margin: 10px 0px 5px 40px; }
-    body #mainServ .resto p {
-      margin-left: 40px;
-      margin-bottom: 50px; }
-    body #mainServ .excursion h2 {
-      margin: 10px 0px 5px 40px; }
-    body #mainServ .excursion p {
-      margin-left: 40px;
-      margin-bottom: 50px; }
-    body #mainServ .spa h2 {
-      margin: 10px 0px 5px 40px; }
-    body #mainServ .spa p {
-      margin-left: 40px;
-      margin-bottom: 50px; }
+        font-size: 1rem; }
+  body {
+    width: 100%; }
+    body #mainServ {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 100%;
+      width: 100%; }
+      body #mainServ .resto img {
+        height: 300px;
+        width: 500px;
+        border-radius: 10px;
+        margin: 30px 40px 1px 40px;
+        animation-name: motion;
+        animation-duration: 3s; }
+      body #mainServ .resto h2 {
+        margin: 20px 40px 5px 40px; }
+      body #mainServ .resto p {
+        margin-right: 200px; }
+      body #mainServ .excursion img {
+        height: 300px;
+        width: 500px;
+        border-radius: 10px;
+        margin: 30px 40px 1px 40px;
+        animation-name: motion;
+        animation-duration: 3s; }
+      body #mainServ .excursion h2 {
+        margin: 20px 40px 5px 40px; }
+      body #mainServ .excursion p {
+        margin-right: 200px; }
+      body #mainServ .spa img {
+        height: 300px;
+        width: 500px;
+        border-radius: 10px;
+        margin: 30px 40px 1px 40px;
+        animation-name: motion;
+        animation-duration: 3s; }
+      body #mainServ .spa h2 {
+        margin: 20px 40px 5px 40px; }
+      body #mainServ .spa p {
+        margin-right: 200px; }
   @keyframes motion {
     from {
       transform: scale(0);
@@ -414,6 +400,8 @@ body footer {
       transform: scale(1, 1);
       opacity: 1; } }
   body #mainHab {
+    height: 100%;
+    width: 100vw;
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr;
@@ -422,45 +410,356 @@ body footer {
     align-items: stretch; }
     body #mainHab #habUno {
       grid-area: habitacion1;
-      padding: 10px;
+      margin: 10px;
+      padding: 1px;
       display: flex;
-      flex-direction: row; }
+      flex-direction: column; }
+      body #mainHab #habUno div h2 {
+        padding: 15px 0px 0px 15px;
+        font-size: 1.3rem; }
+      body #mainHab #habUno div p {
+        font-size: 0.9rem;
+        padding: 18px; }
       body #mainHab #habUno img {
-        height: 80px; }
+        height: 400px;
+        width: 500px;
+        margin: 15px; }
     body #mainHab #habDos {
       grid-area: habitacion2;
-      padding: 10px;
+      margin: 10px;
+      padding: 1px;
       display: flex;
-      flex-direction: row; }
+      flex-direction: column; }
+      body #mainHab #habDos div h2 {
+        padding: 15px 0px 0px 15px;
+        font-size: 1.3rem; }
+      body #mainHab #habDos div p {
+        font-size: 0.9rem;
+        padding: 18px; }
       body #mainHab #habDos img {
-        height: 80px; }
+        height: 350px;
+        margin: 15px; }
     body #mainHab #habTres {
+      margin: 10px;
       grid-area: habitacion3;
-      padding: 10px;
+      padding: 1px;
       display: flex;
-      flex-direction: row; }
+      flex-direction: column; }
+      body #mainHab #habTres div h2 {
+        padding: 15px 0px 0px 15px;
+        font-size: 1.3rem; }
+      body #mainHab #habTres div p {
+        font-size: 0.9rem;
+        padding: 18px; }
       body #mainHab #habTres img {
-        height: 80px; }
+        height: 380px;
+        margin: 15px; }
   body #mainNos {
+    background-color: #d6faac;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "conocenos " "video";
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "conocenos video";
     justify-items: center;
     align-items: center; }
+    body #mainNos .conocenos {
+      grid-area: conocenos;
+      padding: 10px; }
+      body #mainNos .conocenos h4 {
+        font-size: 1.5rem;
+        text-align: center;
+        margin: 30px; }
+      body #mainNos .conocenos p {
+        font-size: 1.1rem;
+        text-align: center; }
     body #mainNos .video {
-      height: 200px; }
-  body #mainContact .container form {
-    box-shadow: 3px 5px 5px -3px;
-    background-color: #bee98a;
-    border-radius: 10px;
-    width: 350px;
+      grid-area: video;
+      padding: 10px; }
+      body #mainNos .video iframe {
+        height: 300px;
+        width: 400px;
+        border-radius: 10px; }
+  body #mainContact {
+    height: 100%;
+    background-color: #d6faac;
     display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    body #mainContact .container form label .imputCont {
+    justify-content: space-around;
+    justify-items: strech; }
+    body #mainContact p {
+      color: #393737;
+      text-align: center;
+      font-style: italic;
+      font-size: 2rem;
+      align-self: center; }
+    body #mainContact .form {
+      margin: 10px;
+      box-shadow: 3px 5px 5px -3px;
       background-color: #bee98a;
-      padding: 2px;
-      margin: 5px;
-      border: none;
-      border-bottom: 2px solid #a7aba1; } }
+      border-radius: 10px;
+      width: 400px; }
+      body #mainContact .form label {
+        width: 90%;
+        display: block;
+        margin: 20px 0px 0px 20px; }
+        body #mainContact .form label .imputCont {
+          background-color: #bee98a;
+          width: 100%;
+          outline: none;
+          border: none;
+          border-bottom: 2px solid #a7aba1; }
+        body #mainContact .form label textarea {
+          width: 359px;
+          height: 100px; }
+      body #mainContact .form .boton {
+        width: 47%;
+        margin-left: 6px;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-image: linear-gradient(#ffffff, #a5f74e); }
+      body #mainContact .form .boton:active {
+        background-image: linear-gradient(#a5f74e, #ffffff); } }
+
+@media (max-width: 425px) {
+  body {
+    height: 100vh; }
+    body header {
+      height: 20vh;
+      background-image: linear-gradient(#ffffff, #a5f74e);
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "logo"  "nav";
+      justify-items: center;
+      align-items: center; }
+      body header .logo {
+        display: inline-block;
+        background-color: #CCFF00;
+        margin: 5px;
+        padding: 3px;
+        text-align: center;
+        border-radius: 100%;
+        animation-name: logohotel;
+        animation-duration: 2s; }
+        body header .logo h1 {
+          color: #43175d;
+          display: inline;
+          font-size: 0.8rem;
+          font-style: italic; }
+  @keyframes logohotel {
+    from {
+      transform: rotate(0);
+      opacity: 0; }
+    to {
+      transform: rotate(360deg);
+      opacity: 1; } }
+      body header .nav .vineta .lista {
+        display: inline-block; }
+        body header .nav .vineta .lista .item {
+          color: black;
+          text-decoration: none;
+          font-style: italic;
+          background-color: none;
+          padding: 2px;
+          margin-inline: 10px;
+          margin-bottom: 25px;
+          border-radius: 5px;
+          transition: 1s; }
+    body footer {
+      background-color: #9ccc65;
+      height: 20vh;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-items: center; }
+      body footer div {
+        flex-basis: 1;
+        flex-grow: 100%;
+        margin-top: 5px; }
+        body footer div .telFooter {
+          height: 15px; }
+        body footer div .numTel {
+          padding-left: 5px; }
+      body footer div {
+        flex-basis: 1;
+        flex-grow: 100%;
+        margin-top: 5px; }
+        body footer div .textFooter {
+          height: 15px; }
+      body footer div {
+        flex-basis: 1;
+        flex-grow: 100%;
+        margin-top: 5px; }
+        body footer div .mailFooter {
+          height: 15px; }
+        body footer div .mail {
+          padding-left: 5px; }
+    body main {
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: "sectionuno" "sectiondos";
+      justify-items: center;
+      align-items: stretch; }
+      body main .sectionUno {
+        width: 100vw;
+        grid-area: sectionuno; }
+        body main .sectionUno div .foto {
+          border-radius: 10px;
+          height: 280px;
+          width: 360px; }
+      body main .sectionDos {
+        width: 100vw;
+        padding: 1px;
+        grid-area: sectiondos; }
+        body main .sectionDos div {
+          margin: 0px 30px 15px 30px; }
+          body main .sectionDos div .titulo {
+            padding-top: 10px; }
+          body main .sectionDos div .parrafo1 {
+            color: #042c0d;
+            font-style: italic;
+            text-align: left;
+            font-size: 1.1rem; }
+    body #mainServ {
+      width: 100vw;
+      height: 100%;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "resto"  "excursion" "spa";
+      justify-content: center;
+      align-items: center; }
+      body #mainServ .resto img {
+        border-radius: 10px;
+        height: 200px;
+        width: 330px;
+        margin: 30px 40px 1px 40px;
+        animation-name: motion;
+        animation-duration: 3s;
+        margin-top: 15px; }
+      body #mainServ .resto h2 {
+        margin: 10px 0px 5px 40px; }
+      body #mainServ .resto p {
+        margin: 0px 40px 0px 40px;
+        margin-left: 40px;
+        margin-bottom: 10px; }
+      body #mainServ .excursion img {
+        border-radius: 10px;
+        height: 200px;
+        width: 330px;
+        margin: 30px 40px 1px 40px;
+        animation-name: motion;
+        animation-duration: 3s; }
+      body #mainServ .excursion h2 {
+        margin: 10px 0px 5px 40px; }
+      body #mainServ .excursion p {
+        margin: 0px 40px 0px 40px;
+        margin-left: 40px;
+        margin-bottom: 10px; }
+      body #mainServ .spa img {
+        border-radius: 10px;
+        height: 200px;
+        width: 330px;
+        margin: 30px 40px 1px 40px;
+        animation-name: motion;
+        animation-duration: 3s; }
+      body #mainServ .spa h2 {
+        margin: 10px 0px 5px 40px; }
+      body #mainServ .spa p {
+        margin: 0px 40px 0px 40px;
+        margin-left: 40px;
+        margin-bottom: 10px; }
+  @keyframes motion {
+    from {
+      transform: scale(0);
+      opacity: 0; }
+    to {
+      transform: scale(1, 1);
+      opacity: 1; } }
+    body #mainHab {
+      width: 100vw;
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "habitacion1 " "habitacion2 " "habitacion3";
+      justify-items: center;
+      align-items: stretch; }
+      body #mainHab #habUno {
+        grid-area: habitacion1;
+        margin: 10px;
+        padding: 1px;
+        display: flex;
+        flex-direction: column; }
+        body #mainHab #habUno div h2 {
+          padding: 15px 0px 0px 15px;
+          font-size: 1.3rem; }
+        body #mainHab #habUno div p {
+          font-size: 0.9rem;
+          padding: 18px; }
+        body #mainHab #habUno img {
+          height: 250px;
+          width: 360px;
+          margin: 15px; }
+      body #mainHab #habDos {
+        grid-area: habitacion2;
+        margin: 10px;
+        padding: 1px;
+        display: flex;
+        flex-direction: column; }
+        body #mainHab #habDos div h2 {
+          padding: 15px 0px 0px 15px;
+          font-size: 1.3rem; }
+        body #mainHab #habDos div p {
+          font-size: 0.9rem;
+          padding: 18px; }
+        body #mainHab #habDos img {
+          height: 205px;
+          margin: 15px; }
+      body #mainHab #habTres {
+        margin: 10px;
+        grid-area: habitacion3;
+        padding: 1px;
+        display: flex;
+        flex-direction: column; }
+        body #mainHab #habTres div h2 {
+          padding: 15px 0px 0px 15px;
+          font-size: 1.3rem; }
+        body #mainHab #habTres div p {
+          font-size: 0.9rem;
+          padding: 18px; }
+        body #mainHab #habTres img {
+          height: 230px;
+          margin: 15px; }
+    body #mainNos {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr;
+      grid-template-areas: "conocenos " "video";
+      justify-items: center;
+      align-items: center; }
+      body #mainNos .video iframe {
+        width: 400px;
+        height: 230px; }
+    body #mainContact {
+      height: 100%; }
+      body #mainContact p {
+        font-size: 1.5rem;
+        margin-top: 20px; }
+      body #mainContact .form {
+        box-shadow: 3px 5px 5px -3px;
+        background-color: #bee98a;
+        border-radius: 10px;
+        width: 350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; }
+        body #mainContact .form label .imputCont {
+          background-color: #bee98a;
+          padding: 2px;
+          margin: 5px 0px 5px 0px;
+          border: none;
+          border-bottom: 2px solid #a7aba1; }
+        body #mainContact .form label textarea {
+          width: 320px; } }

@@ -1,9 +1,9 @@
 body{
-    main{
+    main{ 
+        height:73vh;
         width: 100vw;
         background-color: $background-main;
         grid-area: main;
-        height:73vh;
         display: flex;
         flex-direction:row;
         flex-wrap: wrap;
@@ -11,22 +11,27 @@ body{
         .sectionUno{
             width: 50vw;
             @include flexBox(row, center, center,wrap);
-            grid-area: sectionuno;
-            .foto{
-                height: 70vh;
-                width:45vw;
+            // grid-area: sectionuno;
+            div{
+                .foto{
+                    border-radius: 10px;
+                    height:430px;
+                    width: 600px;
+                }
             }
         }
         .sectionDos{
             width: 50vw;
+            padding: 15px;
             @include flexBox(row, center, center,wrap);
-            grid-area: sectiondos;
+            // grid-area: sectiondos;
             div{
                 .titulo{
+                    font-size: 2.5rem;
                     padding: 20px 0px;
                 }
                 .parrafo1{
-                    color: rgb(4, 44, 13);
+                    color:$color-texto;
                     font-style: italic;
                     text-align:left;
                     font-size: 1.2rem;

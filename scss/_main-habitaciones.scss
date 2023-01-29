@@ -7,15 +7,16 @@ body{
         grid-template-areas: 
         "habitacion1 habitacion2 habitacion3";
         justify-items:center;
-        align-items: start;
+        align-items: center;
         #habUno{
             grid-area: habitacion1;
            @include reset-habitaciones;
             h2{
-                margin-bottom: 20px;
+                margin-bottom: 5px;
             }
             img{
                 height:  $heigth-img-hab;
+                width: 310px;
                 padding-top: 10px;
             }
         }
@@ -23,7 +24,7 @@ body{
             grid-area: habitacion2; 
             @include reset-habitaciones;
             h2{
-                margin-bottom: 20px;
+                margin-bottom: 5px;
             }
             img{
                 height: $heigth-img-hab ;
@@ -34,7 +35,7 @@ body{
             grid-area: habitacion3;
             @include reset-habitaciones;
             h2{
-                margin-bottom: 20px;
+                margin-bottom: 5px;
             }
             img{
                 height: $heigth-img-hab;
