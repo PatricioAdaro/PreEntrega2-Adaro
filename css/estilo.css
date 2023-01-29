@@ -363,35 +363,35 @@ body footer {
         height: 300px;
         width: 500px;
         border-radius: 10px;
-        margin: 30px 40px 1px 40px;
+        margin: 30px 125px 1px 125px;
         animation-name: motion;
         animation-duration: 3s; }
       body #mainServ .resto h2 {
-        margin: 20px 40px 5px 40px; }
+        margin: 20px 40px 5px 125px; }
       body #mainServ .resto p {
-        margin-right: 200px; }
+        margin: 0px 125px 20px 125px; }
       body #mainServ .excursion img {
         height: 300px;
         width: 500px;
         border-radius: 10px;
-        margin: 30px 40px 1px 40px;
+        margin: 30px 125px 1px 125px;
         animation-name: motion;
         animation-duration: 3s; }
       body #mainServ .excursion h2 {
-        margin: 20px 40px 5px 40px; }
+        margin: 20px 40px 5px 125px; }
       body #mainServ .excursion p {
-        margin-right: 200px; }
+        margin: 0px 125px 20px 125px; }
       body #mainServ .spa img {
         height: 300px;
         width: 500px;
         border-radius: 10px;
-        margin: 30px 40px 1px 40px;
+        margin: 30px 125px 1px 125px;
         animation-name: motion;
         animation-duration: 3s; }
       body #mainServ .spa h2 {
-        margin: 20px 40px 5px 40px; }
+        margin: 20px 40px 5px 125px; }
       body #mainServ .spa p {
-        margin-right: 200px; }
+        margin: 0px 125px 20px 125px; }
   @keyframes motion {
     from {
       transform: scale(0);
@@ -418,7 +418,7 @@ body footer {
         padding: 15px 0px 0px 15px;
         font-size: 1.3rem; }
       body #mainHab #habUno div p {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         padding: 18px; }
       body #mainHab #habUno img {
         height: 400px;
@@ -434,7 +434,7 @@ body footer {
         padding: 15px 0px 0px 15px;
         font-size: 1.3rem; }
       body #mainHab #habDos div p {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         padding: 18px; }
       body #mainHab #habDos img {
         height: 350px;
@@ -449,7 +449,7 @@ body footer {
         padding: 15px 0px 0px 15px;
         font-size: 1.3rem; }
       body #mainHab #habTres div p {
-        font-size: 0.9rem;
+        font-size: 1.1rem;
         padding: 18px; }
       body #mainHab #habTres img {
         height: 380px;

@@ -55,15 +55,15 @@
                     height: 300px;
                     width: 500px;
                     border-radius: 10px;
-                    margin: 30px 40px 1px 40px;
+                    margin: 30px 125px 1px 125px;
                     animation-name: motion;
                     animation-duration: 3s; 
                 }
                 h2{
-                    margin:$margin-h2-servicio;
+                    margin:20px 40px 5px 125px;
                 }
-                p{margin-right: 200px;
-                    
+                p{
+                    margin:0px 125px 20px 125px;
                 }
             }
             .excursion{
@@ -72,15 +72,15 @@
                     height: 300px;
                     width: 500px;
                     border-radius: 10px;
-                    margin: 30px 40px 1px 40px;
+                    margin: 30px 125px 1px 125px;
                     animation-name: motion;
                     animation-duration: 3s; 
                 }
                 h2{
-                    margin:$margin-h2-servicio;
+                    margin:20px 40px 5px 125px;
                 }
                 p{
-                    margin-right: 200px;
+                    margin:0px 125px 20px 125px;
                 }
             }
             .spa{
@@ -89,15 +89,16 @@
                     height: 300px;
                     width: 500px;
                     border-radius: 10px;
-                    margin: 30px 40px 1px 40px;
+                    margin: 30px 125px 1px 125px;
                     animation-name: motion;
                     animation-duration: 3s; 
                 }
                 h2{
-                    margin:$margin-h2-servicio;
+                    margin:20px 40px 5px 125px;
                 }
                 p{
-                    margin-right: 200px;
+                    margin: 0px 125px 20px 125px;
+                   
                 }
             }
             @keyframes motion {
@@ -138,7 +139,7 @@
                             padding: 15px 0px 0px 15px;
                             font-size: 1.3rem;
                         }
-                        p{font-size: 0.9rem;
+                        p{font-size: 1.1rem;
                             padding: 18px;
                         }
                     }
@@ -161,7 +162,7 @@
                         padding: 15px 0px 0px 15px;
                         font-size: 1.3rem;
                     }
-                    p{font-size: 0.9rem;
+                    p{font-size: 1.1rem;
                         padding: 18px;
                     }
                 }
@@ -181,7 +182,7 @@
                         padding: 15px 0px 0px 15px;
                         font-size: 1.3rem;
                     }
-                    p{font-size: 0.9rem;
+                    p{font-size: 1.1rem;
                         padding: 18px;
                     }
                 }
