@@ -1,29 +1,34 @@
 body{
+    height: 100vh;
+    width: 100vw;
     main{ 
-        height:73vh;
+        height: 73vh;
         width: 100vw;
-        background-color: $background-main;
+        background-color:$background-main;
         grid-area: main;
         display: flex;
-        flex-direction:row;
-        flex-wrap: wrap;
-        justify-content: space-around;
         .sectionUno{
+            height: 100%;
             width: 50vw;
-            @include flexBox(row, center, center,wrap);
-            div{
-                .foto{
-                    border-radius: 10px;
-                    height:430px;
-                    width: 600px;
-                }
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .foto{
+                border-radius: 10px;
+                width: 85%;
+                margin:10px 0px;
             }
         }
         .sectionDos{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
             width: 50vw;
-            padding: 15px;
-            @include flexBox(row, center, center,wrap);
             div{
+                padding: 20px;
+                display:flex;
+                flex-flow: column nowrap;
                 .titulo{
                     font-size: 2.5rem;
                     padding: 20px 0px;

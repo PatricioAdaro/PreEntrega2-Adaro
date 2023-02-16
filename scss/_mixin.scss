@@ -1,25 +1,18 @@
-@mixin flexBox ($direccion, $justify, $align, $wrap ){
-    display: flex;
-    flex-direction: $direccion;
-    justify-content: $justify;
-    align-items: $align;
-    flex-wrap: $wrap;
-}
 @mixin reset-img-servicio{
     border-radius: 10px;
-    height: 200px;
-    width: 330px;
-    margin: 30px 40px 1px 40px;
+    width: 100%;
     animation-name: motion;
     animation-duration: 3s;
 }
-
 @mixin reset-habitaciones {
-    border: 2px solid black;
+    background-image:linear-gradient(white, #FF7F3F);
+    max-width: 400px;
+    padding: 10px;
+    border: 2px solid rgb(61, 61, 61);
     border-radius: 10px;
-    padding: 15px;
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
+}
+@mixin reset-img-habitaciones{
+    width: 100%;
+    margin-top: 10px;
+    border-radius: 10px;
 }

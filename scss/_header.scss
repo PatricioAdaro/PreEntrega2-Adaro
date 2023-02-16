@@ -1,16 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 body{
     height: 100vh;
     width: 100vw;
     display: grid;
-    grid-template-rows:1fr 1fr 1fr ;
+    grid-template-rows:1fr 1fr 1fr;
     grid-template-columns:1fr 1fr;
     grid-template-areas: 
     "header header"
     "main main"
     "footer footer";
     header{
-        height: 15vh;
-        background-image:linear-gradient(#ffffff, #a5f74e);
+        height:15vh;
+        width: 100vw;
+        background-image:linear-gradient($color-bases, white);
         grid-area: header;
         display: flex;
         flex-direction: row;
@@ -19,7 +25,7 @@ body{
         align-items: center;
         .logo{
             display:inline-block;
-            background-color: #CCFF00 ;
+            background-color: #FFEF82 ;
             margin: 5px;
             padding: 3px;
             text-align: center;
@@ -43,27 +49,33 @@ body{
                 opacity: 1;
             }
         }
-
         .nav{
+            .menuIcono img{
+               height: 40px;
+               width: 40px;
+               border-radius: 2px; 
+            }
+            .menuIcono, #check{
+                display: none;
+            }
             .vineta{
                 display: flex;
                 flex-direction: row;
+                flex-wrap: wrap;
                 .lista{
                     display: inline;
                     text-align: center;
                     .item{
                         color: rgb(0, 0, 0);
-                        font-style: italic;
                         text-decoration: none;
-                        background-color:#9ccc65;
+                        font-size: 1.1rem;
                         padding: 2px;
                         margin-inline: 10px;
                         margin-bottom: 25px;
-                        border-radius: 5px;
-                        transition: 1s;
                     }
                     .item:hover {
-                        background-color: #dbefc3;
+                        color: #797a78;
+                        border-bottom: 2px solid #797a78;;
                     }
                 }
             }

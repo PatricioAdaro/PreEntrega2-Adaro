@@ -1,51 +1,57 @@
 body{
-    
+    height: 100vh;
+    width: 100vw;
     #mainServ{
         grid-area: main;
-        height: 73vh;
-        background-color: $background-main;
-        display: grid;
-        grid-template-rows: 1fr;
-        grid-template-columns:1fr 1fr 1fr ;
-        grid-template-areas:
-        "resto excursion spa";
+        height: 100%;
+        width: 100vw;
+        background-color:$background-main;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
         .resto{
-            grid-area: resto;
-            @include flexBox(column, start, flex-start, wrap);
+            max-width: 420px;
+            padding: 0 15px;
+            margin: 10px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: estar;
+            justify-content: flex-start;
             img{
                 @include reset-img-servicio;
             }
             h2{
                 margin:$margin-h2-servicio
             }
-            p{
-                margin: $margin-p-servicio;
-            }
         }
         .excursion{
-            grid-area: excursion;
-            @include flexBox(column, start, flex-start, wrap);
+            max-width: 420px;
+            padding: 0 15px;
+            margin: 10px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: estar;
+            justify-content: flex-start;
             img{
                 @include reset-img-servicio;
             }
             h2{
-                margin:$margin-h2-servicio;
-            }
-            p{
-                margin: $margin-p-servicio;
+                margin:$margin-h2-servicio
             }
         }
         .spa{
-            grid-area: spa;
-            @include flexBox(column, start, flex-start, wrap);
+            max-width: 420px;
+            padding: 0 15px;
+            margin: 10px;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: estar;
+            justify-content: flex-start;
             img{
                 @include reset-img-servicio;
             }
             h2{
-                margin:$margin-h2-servicio;
-            }
-            p{
-                margin: $margin-p-servicio;
+                margin:$margin-h2-servicio
             }
         }
         @keyframes motion {

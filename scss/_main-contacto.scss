@@ -1,28 +1,34 @@
-body{
+body{height: 100vh;
+    width: 100vw;
     #mainContact{
-        height:73vh ;
+       height: auto;
+        width: 100%;
         background-color:$background-main;
         display: flex;
-        justify-content: space-around;
-        justify-items: strech;
+        flex-flow: row;
+        justify-content:center;
         p{  
             color: #393737;
             text-align: center;
             font-style: italic;
             font-size: 2rem;
             align-self: center;
+            margin: 30px;
+            max-width: 80%;
         }
-        .form{
-            margin: 10px;
+        .form{ 
+            max-height: 430px;
+            max-width:80%;
+            margin: 20px 30px;
+            padding: 15px;
             box-shadow: 3px 5px 5px -3px  ;
-            background-color:$color-form;
+            background-color: $color-form;
             border-radius: 10px;
-            width:400px;
             label{
-                width: 90%;
+                width: 100%;
                 display:block;
-                margin: 20px 0px 0px 20px;
-                .imputCont{
+                margin-top: 15px;
+               .imputCont{
                     background-color: $color-form;
                     width: 100%;
                     outline: none;
@@ -30,17 +36,20 @@ body{
                     border-bottom:2px solid #a7aba1;
                 }
                 textarea{
-                    width: 359px;
+                    width: 100%;
                     height: 100px;
                 } 
             }
             .boton{
                 width: 47%;
-                margin-left: 6px;
+                margin-top: 15px;
                 padding: 10px;
                 border: none;
                 border-radius: 5px;
                 background-image:linear-gradient(#ffffff, #a5f74e);
+            }
+            .btn-2{
+                float: right;
             }
             .boton:active{
                 background-image:linear-gradient(#a5f74e,#ffffff);

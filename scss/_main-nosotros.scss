@@ -1,36 +1,37 @@
-body{
+body{width: 100vw;
     #mainNos{
+        width: 100%;
+        height: auto;
+        padding: 20px;
         background-color: $background-main;
         display: grid;
         grid-template-rows:1fr ;
         grid-template-columns:1fr 1fr ;
         grid-template-areas: 
         "conocenos video";
+        align-items: center;
         justify-items: center;
-        align-items:center;
         .conocenos{
+            max-width:600px;
             grid-area: conocenos;
             padding: 10px;
-            
             h4{
-                font-size: 1.5rem;
+                font-size: 1.8rem;
                 text-align: center;
-                margin: 30px;
+                margin-bottom: 10px;
             } 
             p{
-                font-size: 1.1rem;
+                font-size: 1.5rem;
                 text-align: center;
             } 
         }
         .video{
+            height: 100%;
+            width: 100%;
             grid-area: video;
-            padding: 10px;
-            
             iframe{ 
-            height: 400px;
-            width: 600px;
-            border-radius:10px;
-
+                width: 100%;
+                border-radius:10px;
             }
         }
     }

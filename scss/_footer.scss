@@ -1,13 +1,16 @@
 body{
     footer{
-        background-color: $color-bases;
+        background-color:$color-bases;
         height: 12vh;
+        min-height: 100%;
+        width: 100vw;
         grid-area: footer;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
         div{
+            margin:0px 20px;
             display: flex;
             justify-content: center;
             align-items: center;

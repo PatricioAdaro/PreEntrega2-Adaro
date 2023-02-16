@@ -1,120 +1,88 @@
+@media(max-width:1024px) {
 
-
-@media(max-width:768px) {
-
-            // MAIN INICIO TABLET
+    // MAIN INICIO LAPTOP
+    
     body{
-        main{ 
-            background-color: $background-main;
-            grid-area: main;
+        height: 100vh;
+       main{
+            height: 100%;
             display: flex;
-            flex-direction:row;
-            flex-wrap: wrap;
-            justify-content: space-around;
+            flex-flow:column-reverse;
             .sectionUno{
-                @include flexBox(row, center, center,wrap);
-                div{
-                    .foto{
-                        border-radius: 10px;
-                        height: 290px;
-                        width: 370px;
-                    }
+                width: 100%;
+                height: 100%;
+                .foto{width: 85%;
                 }
             }
             .sectionDos{
-                padding: 15px;
-                @include flexBox(row, center, center,wrap);
+                width: 100%;
+                height: 100%;
                 div{
-                    .titulo{
-                        font-size: 1.5rem;
-                        padding: 20px 0px;
-                    }
-                    .parrafo1{
-                        color:$color-texto;
-                        font-style: italic;
-                        text-align:left;
-                        font-size: 1rem;
-                    }
+                   width: 90%;
+                    
                 }
             }
         }
     }
+}
+@media(max-width:768px) {
 
+    // MAIN INICIO TABLET
+    body{
+        header{
+            height: 100%;
+            width: 100%;
+        }
+        main{
+            .sectionUno{
+                .foto{width: 85%;
+                }
+            }
+        }
+    } 
 
     //MAIN SERVICIO TABLET
 
-    body{width: 100%;
+    body{
+        height: 100vh;
+        width: 100vw;
+        header{
+            height: 25vh;
+        }
         #mainServ{
-            display: flex;
-            flex-direction: column;
-            flex-wrap: wrap;
             height: 100%;
-            width: 100%;
             .resto{
+                max-width: 600px;
                 img{
-                    height: 300px;
-                    width: 500px;
+                    width:100%;
                     border-radius: 10px;
-                    margin: 30px 125px 1px 125px;
                     animation-name: motion;
                     animation-duration: 3s; 
-                }
-                h2{
-                    margin:20px 40px 5px 125px;
-                }
-                p{
-                    margin:0px 125px 20px 125px;
                 }
             }
             .excursion{
-               
+                max-width: 600px;
                 img{
-                    height: 300px;
-                    width: 500px;
+                    width: 100%;
                     border-radius: 10px;
-                    margin: 30px 125px 1px 125px;
                     animation-name: motion;
                     animation-duration: 3s; 
-                }
-                h2{
-                    margin:20px 40px 5px 125px;
-                }
-                p{
-                    margin:0px 125px 20px 125px;
                 }
             }
             .spa{
-                
+                max-width:600px;
                 img{
-                    height: 300px;
-                    width: 500px;
+                    width: 100%;
                     border-radius: 10px;
-                    margin: 30px 125px 1px 125px;
                     animation-name: motion;
                     animation-duration: 3s; 
-                }
-                h2{
-                    margin:20px 40px 5px 125px;
-                }
-                p{
-                    margin: 0px 125px 20px 125px;
-                   
-                }
-            }
-            @keyframes motion {
-                from{
-                    transform: scale(0);
-                    opacity: 0;
-                }
-                to{
-                    transform: scale(1 , 1);
-                    opacity: 1;
                 }
             }
         }
     }
 
-        // MAIN HABITACIONES TABLET
+    // MAIN HABITACIONES TABLET
+    
     body{    
         #mainHab{
             height: 100%;
@@ -129,67 +97,16 @@
             justify-items:center;
             align-items: stretch;
             #habUno{
-                    grid-area: habitacion1;
-                    margin: 10px;
-                    padding: 1px;
-                    display: flex;
-                    flex-direction: column; 
-                    div{ 
-                        h2{
-                            padding: 15px 0px 0px 15px;
-                            font-size: 1.3rem;
-                        }
-                        p{font-size: 1.1rem;
-                            padding: 18px;
-                        }
-                    }
-                    img{
-                        height: 400px;
-                        width: 500px;
-                        margin: 15px  
-                    }
-               
+                grid-area: habitacion1;
+                max-width: 600px;
             }
             #habDos{
                 grid-area: habitacion2;
-                margin: 10px; 
-                padding: 1px;
-                display: flex;
-                flex-direction: column;
-                
-                div{ 
-                    h2{
-                        padding: 15px 0px 0px 15px;
-                        font-size: 1.3rem;
-                    }
-                    p{font-size: 1.1rem;
-                        padding: 18px;
-                    }
-                }
-                img{
-                    height:350px;
-                    margin: 15px  
-                }
+                max-width: 600px;
             }
             #habTres{
-                margin: 10px;
                 grid-area: habitacion3;
-                padding: 1px;
-                display: flex;
-                flex-direction: column;
-                div{ 
-                    h2{
-                        padding: 15px 0px 0px 15px;
-                        font-size: 1.3rem;
-                    }
-                    p{font-size: 1.1rem;
-                        padding: 18px;
-                    }
-                }
-                img{
-                    height: 380px;
-                    margin: 15px  
-                }
+                max-width: 600px;
             }
         }
     }
@@ -198,157 +115,72 @@
         #mainNos{
             background-color: $background-main;
             display: grid;
-            grid-template-rows:1fr ;
-            grid-template-columns:1fr 1fr ;
+            gap: 20px;
+            grid-template-rows:1fr 1fr;
+            grid-template-columns: 1fr;
             grid-template-areas: 
-            "conocenos video";
+            "conocenos"
+            "video";
             justify-items: center;
-            align-items:center;
-            .conocenos{
-                grid-area: conocenos;
-                padding: 10px;
-                
-                h4{
-                    font-size: 1.5rem;
-                    text-align: center;
-                    margin: 30px;
-                } 
-                p{
-                    font-size: 1.1rem;
-                    text-align: center;
-                } 
-            }
-            .video{
-                grid-area: video;
-                padding: 10px;
-                
-                iframe{ 
-                height: 300px;
-                width: 400px;
-                border-radius:10px;
-    
-                }
-            }
+            align-items: center;
         }
     }
 
     // MAIN DE CONTACTO TABLET
     body{
         #mainContact{
-            height:100% ;
-            background-color:$background-main;
-            display: flex;
-            justify-content: space-around;
-            justify-items: strech;
-                p{  
-                    color: #393737;
-                    text-align: center;
-                    font-style: italic;
-                    font-size: 2rem;
-                    align-self: center;
-                }
-                .form{
-                    margin: 10px;
-                    box-shadow: 3px 5px 5px -3px  ;
-                    background-color:$color-form;
-                    border-radius: 10px;
-                    width:400px;
-                    label{
-                        width: 90%;
-                        display:block;
-                        margin: 20px 0px 0px 20px;
-                        .imputCont{
-                            background-color: $color-form;
-                            width: 100%;
-                            outline: none;
-                            border: none;
-                            border-bottom:2px solid #a7aba1;
-                        }
-                        textarea{
-                            width: 359px;
-                            height: 100px;
-                        } 
-                    }
-                    .boton{
-                        width: 47%;
-                        margin-left: 6px;
-                        padding: 10px;
-                        border: none;
-                        border-radius: 5px;
-                        background-image:linear-gradient(#ffffff, #a5f74e);
-                    }
-                    .boton:active{
-                        background-image:linear-gradient(#a5f74e,#ffffff);
-                    }
-                }
-        }      
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+        }
     }         
-        
-        
 }
-    @media(max-width:425px){
-    // HEADER
+@media(max-width:425px){
+
+    // HEADER MOBILE
+
     body{height: 100vh;
         header{
-            height: 20vh;
-            background-image:linear-gradient(#ffffff, #a5f74e);
-            display: grid;
-            grid-template-rows:1fr 1fr ;
-            grid-template-columns:1fr ;
-            grid-template-areas:
-            "logo" 
-            "nav";
-            justify-items: center;
-            align-items: center;
-            .logo{
-                display:inline-block;
-                background-color: #CCFF00 ;
-                margin: 5px;
-                padding: 3px;
-                text-align: center;
-                border-radius: 100%;
-                animation-name: logohotel;
-                animation-duration: 2s;
-                h1{
-                    color: #43175d;
-                    display: inline;
-                    font-size: 0.8rem; 
-                    font-style: italic; 
-                }
-            }
-            @keyframes logohotel {
-                from{
-                    transform:  rotate(0);
-                    opacity: 0;
-                }
-                to{
-                    transform:  rotate(360deg);
-                    opacity: 1;
-                }
-            }
-    
+            height:15vh;
             .nav{
-                .vineta{
+                #check:checked ~ ul{
+                    left: 0;
+                    transition: all 0.5s;
+                }
+                .checkbtn{
+                    display: block;
+                    .menuIcono{
+                        display: block;
+                        position: absolute;
+                        top: 30px;
+                        right:20px ;
+                    }   
+                }
+                .vineta{   
+                    display: block;
+                    position: absolute;
+                    top: 100px;
+                    left: -100%;
+                    background-color: #464646;;
+                    width: 80%;
+                    height: 315px;
+                    right: 0;
                     
+                    box-shadow: 3px 5px 10px -3px;
                     .lista{
-                        display: inline-block; 
-                        .item{
-                            color: rgb(0, 0, 0);
-                            text-decoration: none;
-                            font-style: italic; 
-                            background-color:none;
-                            padding: 2px;
-                            margin-inline: 10px;
-                            margin-bottom: 25px;
-                            border-radius: 5px;
-                            transition: 1s; 
-                        }
+                       .item{
+                        display: block;
+                        color: white;
+                        margin: 0px;
+                        padding: 20px 0px;
+                        border-bottom: 2px solid black;
+                       }
                     }
                 }
             }
         }
       
-        // FOOTER
+        // FOOTER MOBILE
         
         footer{
             background-color: $color-bases;
@@ -388,242 +220,5 @@
                 }
             }
         }
-
-        // MAIN DE INICIO
-
-        main{
-            height: 100%;
-            display: grid;
-            grid-template-columns: 1fr;
-            grid-template-rows:1fr 1fr ;
-            grid-template-areas: 
-            "sectionuno"
-            "sectiondos";
-            justify-items: center;
-            align-items: stretch;
-            .sectionUno{
-                width: 100vw;
-                         
-                grid-area: sectionuno;
-                
-                div{
-                    .foto{
-                    border-radius: 10px;
-                    height: 280px;
-                    width: 360px;
-                    }
-                }
-            }
-            .sectionDos{
-                width: 100vw;
-                padding: 1px;
-                grid-area: sectiondos;
-                div{ 
-                    margin: 0px 30px 15px 30px;
-                    .titulo{
-                        padding-top: 10px;
-                    }
-                    .parrafo1{
-                        color:$color-texto;  
-                        font-style: italic;
-                        text-align:left;
-                        font-size: 1.1rem;   
-                    }
-                }
-            }
-        }
-
-        // MAIN DE SERVICIOS
-
-        #mainServ{
-            width: 100vw;
-            height: 100%;
-            display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-columns:1fr  ;
-            grid-template-areas:
-            "resto" 
-            "excursion"
-            "spa";
-            justify-content: center;
-            align-items: center;
-           
-            .resto{
-                img{@include reset-img-servicio;
-                    margin-top: 15px;
-                }
-                h2{
-                    margin:10px 0px 5px 40px; 
-                }
-                p{margin: $margin-p-servicio;
-                    margin-left: 40px;
-                    margin-bottom: 10px;  
-                }
-                
-            }
-            .excursion{
-                img{
-                    @include reset-img-servicio;
-                }
-                h2{
-                    margin:10px 0px 5px 40px;
-                }
-                p{margin: $margin-p-servicio;
-                    margin-left: 40px;
-                    margin-bottom: 10px; 
-                }
-            }
-            .spa{
-                img{
-                    @include reset-img-servicio;
-                }
-                h2{
-                    margin:10px 0px 5px 40px; 
-                }
-                p{margin: $margin-p-servicio;
-                    margin-left: 40px;
-                    margin-bottom: 10px; 
-                }
-            }
-            @keyframes motion {
-                from{
-                    transform: scale(0);
-                    opacity: 0;
-                }
-                to{
-                    transform: scale(1 , 1);
-                    opacity: 1;
-                }
-            }
-        }
-
-        // MAIN HABITACIONES
-
-        #mainHab{
-            width: 100vw;
-            display: grid;
-            grid-template-rows: 1fr 1fr 1fr;
-            grid-template-columns:1fr ;
-            grid-template-areas: 
-            "habitacion1 "
-            "habitacion2 "
-            "habitacion3";
-            justify-items:center;
-            align-items: stretch;
-            #habUno{
-                    grid-area: habitacion1;
-                    margin: 10px;
-                    padding: 1px;
-                    display: flex;
-                    flex-direction: column; 
-                    div{ 
-                        h2{
-                            padding: 15px 0px 0px 15px;
-                            font-size: 1.3rem;
-                        }
-                        p{font-size: 0.9rem;
-                            padding: 18px;
-                        }
-                    }
-                    img{
-                        height: 250px;
-                        width: 360px;
-                        margin: 15px  
-                    }
-               
-            }
-            #habDos{
-                grid-area: habitacion2;
-                margin: 10px; 
-                padding: 1px;
-                display: flex;
-                flex-direction: column;
-                
-                div{ 
-                    h2{
-                        padding: 15px 0px 0px 15px;
-                        font-size: 1.3rem;
-                    }
-                    p{font-size: 0.9rem;
-                        padding: 18px;
-                    }
-                }
-                img{
-                    height: 205px;
-                    margin: 15px  
-                }
-            }
-            #habTres{
-                margin: 10px;
-                grid-area: habitacion3;
-                padding: 1px;
-                display: flex;
-                flex-direction: column;
-                div{ 
-                    h2{
-                        padding: 15px 0px 0px 15px;
-                        font-size: 1.3rem;
-                    }
-                    p{font-size: 0.9rem;
-                        padding: 18px;
-                    }
-                }
-                img{
-                    height: 230px;
-                    margin: 15px  
-                }
-            }
-        }
-        // MAIN NOSOTROS
-
-        #mainNos{
-            display: grid;
-            grid-template-rows:1fr 1fr;
-            grid-template-columns:1fr  ;
-            grid-template-areas: 
-            "conocenos "
-            "video";
-            justify-items: center;
-            align-items: center;
-            .video{
-                iframe{
-                    width:400px; 
-                    height:230px;
-                }
-              
-            }
-        }
-        
-        // MAIN DE CONTACTO
-
-        #mainContact{
-                    height: 100%;
-                p{
-                    font-size: 1.5rem;
-                    margin-top: 20px;
-                }
-                .form{
-                    box-shadow: 3px 5px 5px -3px  ;
-                    background-color: #bee98a;
-                    border-radius: 10px;
-                    width:350px;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    label{
-                        .imputCont{
-                                background-color:  #bee98a;
-                                padding: 2px;
-                                margin: 5px 0px 5px 0px;
-                                border: none;
-                                border-bottom:2px solid #a7aba1;
-                        }
-                        textarea{
-                            width: 320px;
-                        }
-                    }
-                }
-           
-        }    
     }
 }
